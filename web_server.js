@@ -221,7 +221,7 @@ module.exports = Class.create({
 			} );
 		} );
 		
-		this.http.listen( port, function(err) {
+		this.http.listen( port, '0.0.0.0', function(err) {
 			if (err) {
 				self.logError('startup', "Failed to start HTTP listener: " + err.message);
 				throw err;
